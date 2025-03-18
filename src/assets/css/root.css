@@ -5,7 +5,7 @@
 /* CodeStitch Root and Helpers */
 @media only screen and (min-width: 0rem) {
   :root {
-    --primary: #ffba19;
+    --primary: #12d300;
     --primaryLight: #ffd675;
     --secondary: #001f3f;
     --secondaryLight: #001f3f;
@@ -1243,5 +1243,197 @@
 @media only screen and (min-width: 0rem) {
   body.dark-mode #footer {
     background: #061623;
+  }
+}
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #services-2220 {
+    padding: var(--sectionPadding);
+    background-color: #fdfaf8;
+    position: relative;
+    z-index: 1;
+  }
+  #services-2220 .cs-container {
+    width: 100%;
+    /* changes to 1840px at tablet */
+    max-width: 44rem;
+    margin: auto;
+  }
+  #services-2220 .cs-title {
+    text-transform: uppercase;
+  }
+  #services-2220 .cs-card-group {
+    width: 100%;
+    /* changes to 100% at tablet */
+    max-width: 31.25rem;
+    margin: 0 auto;
+    padding: 0;
+    /* changes to flexbox at large desktop */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 1.5vw, 1.25rem);
+  }
+  #services-2220 .cs-item {
+    text-align: left;
+    list-style: none;
+    width: 100%;
+    /* 240px - 300px */
+    min-height: clamp(15rem, 30vw, 18.75rem);
+    margin: 0;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    padding: 0;
+    /* clips the image corners */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    grid-column: span 12;
+    grid-row: span 1;
+    position: relative;
+  }
+  #services-2220 .cs-item:hover .cs-h3,
+  #services-2220 .cs-item:focus-within .cs-h3 {
+    transform: translateY(-0.75rem);
+  }
+  #services-2220 .cs-item:hover .cs-background:before,
+  #services-2220 .cs-item:focus-within .cs-background:before {
+    height: 180%;
+  }
+  #services-2220 .cs-item:hover .cs-background img,
+  #services-2220 .cs-item:focus-within .cs-background img {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+  #services-2220 .cs-link {
+    text-decoration: none;
+    height: 100%;
+    /* 16px - 24px */
+    padding: clamp(1rem, 1.25vw, 1.5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  #services-2220 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: inherit;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+    transition: transform 0.3s, color 0.3s;
+  }
+  #services-2220 .cs-content {
+    text-align: center;
+    min-height: 0;
+    padding: 1.5rem;
+    background-color: #fbf5f1;
+    justify-content: center;
+    align-items: center;
+  }
+  #services-2220 .cs-title {
+    margin: 0 0 2rem;
+  }
+  #services-2220 .cs-button-solid {
+    font-size: calc(16 / 16 * 1rem);
+    font-weight: bold;
+    line-height: calc(50 / 16 * 1em);
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: max-content;
+    padding: 0 calc(30 / 16 * 1rem);
+    background-color: var(--primary);
+    color: #000;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+    transition-delay: 0.1s;
+  }
+  #services-2220 .cs-button-solid:hover {
+    color: #fff;
+  }
+  #services-2220 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #services-2220 .cs-button-solid:before {
+    content: "";
+    width: 0;
+    height: 100%;
+    background-color: #000;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #services-2220 .cs-background {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #services-2220 .cs-background:before {
+    /* gradient overlay */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.72) 14.59%, rgba(0, 0, 0, 0) 43.18%);
+    opacity: 1;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: height 0.3s;
+  }
+  #services-2220 .cs-background img {
+    width: 100%;
+    height: 100%;
+    /* Makes img tag act as a background image */
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    transition: transform 0.6s, opacity 0.3s;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #services-2220 .cs-container {
+    max-width: 115rem;
+  }
+  #services-2220 .cs-card-group {
+    max-width: 100%;
+    grid-template-rows: 1fr;
+  }
+  #services-2220 .cs-item {
+    grid-column: span 4;
+  }
+  #services-2220 .cs-item.cs-content {
+    grid-column: span 12;
+  }
+}
+/* Desktop - 1500px */
+@media only screen and (min-width: 93.75rem) {
+  #services-2220 .cs-card-group {
+    min-height: 37.5rem;
+    display: flex;
+    flex-direction: row;
+  }
+  #services-2220 .cs-content {
+    min-width: 22rem;
+    padding: 9.75rem 0 12.5rem;
   }
 }
